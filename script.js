@@ -47,9 +47,7 @@ document.querySelector('#year').textContent = new Date().getFullYear();
 
 viewer.addEventListener('load', () => { stage.classList.add('has-model'); update(); }, { once: true });
 viewer.addEventListener('error', () => { stage.classList.remove('has-model'); });
-fetch(config.model, { method: 'HEAD' }).then(response => {
-  if (response.ok) viewer.src = config.model;
-}).catch(() => {});
+viewer.src = config.model;
 
 const fields = [
   ['yaw', 'Giro horizontal', -180, 180, 1, '°'],

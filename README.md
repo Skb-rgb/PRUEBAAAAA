@@ -22,4 +22,4 @@ También puedes modificar directamente los números de `config.js`. Un valor men
 
 Sube **el contenido de esta carpeta**, con `index.html` en la raíz del repositorio. En GitHub: **Settings → Pages → Deploy from a branch → main → /(root)**. El sitio usa rutas relativas.
 
-Para verlo antes de publicar: ejecuta `python3 -m http.server 8000` dentro de esta carpeta y abre `http://localhost:8000/?editar=1`. El componente 3D necesita conexión para cargar `model-viewer` desde su CDN.
+Para verlo antes de publicar: ejecuta `python3 -m http.server 8000` dentro de esta carpeta y abre `http://localhost:8000/?editar=1`. No abras `index.html` con doble clic (`file://`), porque los navegadores pueden bloquear la carga local del GLB. El componente 3D necesita conexión para cargar `model-viewer` desde su CDN.
