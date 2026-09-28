@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101014">
+  <meta name="description" content="Portafolio de Julián Rodríguez: motion design, identidad visual y diseño 3D.">
+  <title>Julián Rodríguez — Motion & 3D</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23101014'/%3E%3Cpath d='M16 46V18h12v23c0 5-3 8-9 8M37 46V18h8c10 0 15 6 15 14s-5 14-15 14z' fill='none' stroke='%23f5e900' stroke-width='5'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.3.1/model-viewer.min.js"></script>
+  <script src="./config.js"></script>
+  <script defer src="./script.js"></script>
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="#inicio">JULIÁN RODRÍGUEZ<span>®</span></a><span class="topbar-note">MOTION / DESIGN / 3D</span><a href="mailto:julian@example.com" class="contact">HABLEMOS ↗</a></header>
+  <div class="stage" aria-hidden="true">
+    <model-viewer id="character" autoplay alt="Personaje 3D del portafolio de Julián" interaction-prompt="none" environment-image="neutral" shadow-intensity="0.6" exposure="1.1" camera-orbit="0deg 75deg 1.5m" camera-target="0m 0.82m 0m" min-camera-orbit="auto auto 0.1m" interpolation-decay="80"></model-viewer>
+    <img id="sketch" src="./assets/01-inicio.png" alt="">
+    <div class="stage-glow"></div>
+  </div>
+  <main>
+    <section id="inicio" class="screen screen-one" data-view="0">
+      <span class="index">01 / 03 — PRESENTACIÓN</span>
+      <div class="copy left"><p class="eyebrow">HOLA, SOY JULI</p><h1>Las ideas<br>se <em>mueven.</em></h1><p>Diseño motion, identidades y experiencias visuales para contar historias que se quedan.</p><a class="text-link" href="#motion">DESCUBRE MI TRABAJO <span>↓</span></a></div>
+      <span class="side-label">DESLIZA PARA EXPLORAR ↓</span>
+    </section>
+    <section id="motion" class="screen screen-two" data-view="1">
+      <span class="index">02 / 03 — EN DETALLE</span>
+      <div class="copy right"><p class="eyebrow">MOVIMIENTO Y CARÁCTER</p><h2>Diseño con<br><em>personalidad.</em></h2><p>De un storyboard al último fotograma: dirección visual, animación 2D/3D y piezas para broadcast.</p><a class="text-link" href="https://vimeo.com/225588155" target="_blank" rel="noopener noreferrer">VER REEL ↗</a></div>
+    </section>
+    <section id="proyectos" class="screen screen-three" data-view="2">
+      <span class="index">03 / 03 — PROYECTOS</span>
+      <div class="copy left"><p class="eyebrow">DEL CONCEPTO A PANTALLA</p><h2>Cada proyecto<br>tiene <em>historia.</em></h2><p>Branding, campañas y gráficos que funcionan en múltiples formatos, del primer boceto a la entrega final.</p><div class="links"><a class="text-link" href="https://www.behance.net/ju_ro" target="_blank" rel="noopener noreferrer">VER PORTAFOLIO ↗</a><a class="text-link" href="mailto:julian@example.com">ESCRÍBEME ↗</a></div></div>
+    </section>
+  </main>
+  <nav class="steps" aria-label="Secciones"><a href="#inicio" aria-label="Presentación" class="active"></a><a href="#motion" aria-label="Motion design"></a><a href="#proyectos" aria-label="Proyectos"></a></nav>
+  <aside class="editor" id="editor" hidden aria-label="Editor de encuadres">
+    <div class="editor-head"><strong>ENCUADRES 3D</strong><a href="./" aria-label="Cerrar modo edición">×</a></div>
+    <label class="editor-select">Pantalla <select id="view-select"><option value="0">01 · Presentación</option><option value="1">02 · Rostro</option><option value="2">03 · Parte inferior</option></select></label>
+    <div id="editor-sliders"></div>
+    <button id="save-config" type="button">DESCARGAR CONFIG.JS ↓</button>
+    <p>Sube el archivo descargado a la raíz del repositorio para guardar estos encuadres.</p>
+  </aside>
+  <footer>© <span id="year"></span> JULIÁN RODRÍGUEZ <span>HECHO PARA MOVER IDEAS.</span></footer>
+</body>
+</html>
