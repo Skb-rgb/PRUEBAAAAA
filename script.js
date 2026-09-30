@@ -66,10 +66,10 @@ document.querySelector('#year').textContent = new Date().getFullYear();
 const fields = [
   ['yaw', 'Giro horizontal', -180, 180, 1, '°'],
   ['pitch', 'Altura de cámara', 10, 170, 1, '°'],
-  ['distance', 'Distancia / tamaño', 0.5, 5, 0.01, 'm'],
-  ['x', 'Posición horizontal', -2, 2, 0.01, 'm'],
-  ['y', 'Altura del encuadre', -1, 2.5, 0.01, 'm'],
-  ['z', 'Profundidad', -2, 2, 0.01, 'm']
+  ['distance', 'Distancia / tamaño', 0.5, 30, 0.01, 'm'],
+  ['x', 'Posición horizontal', -10, 10, 0.01, 'm'],
+  ['y', 'Altura del encuadre', -5, 10, 0.01, 'm'],
+  ['z', 'Profundidad', -10, 10, 0.01, 'm']
 ];
 const panel = document.querySelector('#editor');
 const select = document.querySelector('#view-select');
