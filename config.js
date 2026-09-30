@@ -4,8 +4,20 @@
 window.PORTFOLIO_CONFIG = {
   model: './assets/personaje.glb?v=3',
   views: [
-    { name: '01 · Presentación', yaw: 0, pitch: 75, distance: 2.05, x: -0.35, y: 0.82, z: 0 },
-    { name: '02 · Rostro', yaw: -12, pitch: 77, distance: 1.25, x: 0.32, y: 1.36, z: 0 },
-    { name: '03 · Parte inferior', yaw: 15, pitch: 78, distance: 1.3, x: -0.35, y: 0.38, z: 0 }
+    {
+      name: '01 · Presentación',
+      yaw: 0, pitch: 90, distance: 22,
+      x: -3.5, y: 2.8, z: 0
+    },
+    {
+      name: '02 · Detalle superior',
+      yaw: -12, pitch: 85, distance: 15,
+      x: 3, y: 3.8, z: 0
+    },
+    {
+      name: '03 · Detalle inferior',
+      yaw: 15, pitch: 85, distance: 16,
+      x: -3, y: 0.7, z: 0
+    }
   ]
 };
