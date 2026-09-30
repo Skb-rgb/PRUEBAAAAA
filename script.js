@@ -45,9 +45,23 @@ addEventListener('scroll', () => {
 addEventListener('resize', update);
 document.querySelector('#year').textContent = new Date().getFullYear();
 
-viewer.addEventListener('load', () => { stage.classList.add('has-model'); update(); }, { once: true });
-viewer.addEventListener('error', () => { stage.classList.remove('has-model'); });
-viewer.src = config.model;
+            async function cargarModelo() {
+              await customElements.whenDefined('model-viewer');
+            
+              viewer.addEventListener('load', () => {
+                stage.classList.add('has-model');
+                update();
+              }, { once: true });
+            
+              viewer.addEventListener('error', event => {
+                stage.classList.remove('has-model');
+                console.error('Error del modelo:', event.detail);
+              });
+            
+              viewer.src = config.model;
+            }
+            
+            cargarModelo();
 
 const fields = [
   ['yaw', 'Giro horizontal', -180, 180, 1, '°'],
